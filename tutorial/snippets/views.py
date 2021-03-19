@@ -16,9 +16,6 @@ class SnippetList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
 
 class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     """
